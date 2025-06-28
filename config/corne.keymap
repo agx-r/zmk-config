@@ -27,15 +27,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_3 {
-            bindings = <
-&trans  &kp Q  &kp W  &kp F           &kp P        &kp G     &kp J   &kp L        &kp U           &kp Y    &kp SEMI  &trans
-&trans  &kp A  &kp R  &mt LEFT_ALT S  &mt LCTRL T  &kp D     &kp H   &mt LCTRL N  &mt LEFT_ALT E  &kp I    &kp O     &trans
-&trans  &kp Z  &kp X  &kp C           &kp V        &kp B     &kp K   &kp M        &kp COMMA       &kp DOT  &kp FSLH  &trans
-                      &trans          &trans       &trans    &trans  &trans       &trans
-            >;
-        };
-
         default_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
@@ -51,7 +42,16 @@
             >;
         };
 
-        lower_layer {
+        colemak_layer {
+            bindings = <
+&trans  &kp Q  &kp W  &kp F           &kp P        &kp G     &kp J   &kp L        &kp U           &kp Y    &kp SEMI  &trans
+&trans  &kp A  &kp R  &mt LEFT_ALT S  &mt LCTRL T  &kp D     &kp H   &mt LCTRL N  &mt LEFT_ALT E  &kp I    &kp O     &trans
+&trans  &kp Z  &kp X  &kp C           &kp V        &kp B     &kp K   &kp M        &kp COMMA       &kp DOT  &kp FSLH  &trans
+                      &trans          &trans       &trans    &trans  &trans       &trans
+            >;
+        };
+
+        numeric_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -66,7 +66,7 @@
             >;
         };
 
-        raise_layer {
+        special_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
