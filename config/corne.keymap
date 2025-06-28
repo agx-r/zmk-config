@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
@@ -17,6 +16,11 @@
         tab_combo {
             bindings = <&kp TAB>;
             key-positions = <19 8>;
+        };
+
+        screen {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <3 4>;
         };
     };
 
@@ -33,7 +37,7 @@
             bindings = <
 &kp ESC        &kp Q  &kp W  &kp E           &kp R           &kp T    &kp Y    &kp U        &kp I           &kp O    &kp P     &kp DEL
 &kp BACKSPACE  &kp A  &kp S  &mt LEFT_ALT D  &mt LCTRL F     &kp G    &kp H    &mt LCTRL J  &mt LEFT_ALT K  &kp L    &kp SEMI  &kp SQT
-&mo 2          &kp Z  &kp X  &kp C           &kp V           &kp B    &kp N    &kp M        &kp COMMA       &kp DOT  &kp FSLH  &kp LCTRL
+&mo 2          &kp Z  &kp X  &kp C           &kp V           &kp B    &kp N    &kp M        &kp COMMA       &kp DOT  &kp FSLH  &rgb_ug RGB_TOG
                              &kp LGUI        &kp LEFT_SHIFT  &mo 1    &kp RET  &kp SPACE    &kp BSPC
             >;
         };
@@ -61,8 +65,8 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH    &kp DLLR    &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &bl BL_TOG
-&trans     &trans    &trans  &bt BT_PRV  &bt BT_NXT  &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &rgb_ug RGB_TOG
+&kp GRAVE  &kp EXCL  &kp AT  &kp HASH    &kp DLLR    &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &rgb_ug RGB_EFF
+&trans     &trans    &trans  &bt BT_PRV  &bt BT_NXT  &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &rgb_ug RGB_EFR
 &trans     &trans    &trans  &trans      &trans      &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                              &trans      &trans      &trans       &trans     &trans     &trans
             >;
