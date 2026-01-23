@@ -19,7 +19,7 @@
 
         screen {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <11 10>;
+            key-positions = <40 37>;
         };
 
         beginning {
@@ -60,16 +60,6 @@
         fwd {
             bindings = <&kp RIGHT_ARROW>;
             key-positions = <20 21>;
-        };
-
-        kill-fwd {
-            bindings = <&kp LC(DELETE)>;
-            key-positions = <12 19 20>;
-        };
-
-        kill-backward {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <12 16 15>;
         };
     };
 
